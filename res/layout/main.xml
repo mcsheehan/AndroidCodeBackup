@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent" android:gravity="center_vertical"
+    android:layout_height="fill_parent" android:gravity="center_horizontal" android:layout_gravity="center">
+    <ImageButton android:src="@drawable/icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/Play" android:layout_centerHorizontal="true" android:layout_centerVertical="true"></ImageButton>
+    <ImageButton android:src="@drawable/icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@+id/Play" android:layout_alignTop="@+id/Play" android:layout_alignBottom="@+id/Play" android:id="@+id/FastForward"></ImageButton>
+    <ImageButton android:src="@drawable/icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toLeftOf="@+id/Play" android:layout_alignTop="@+id/Play" android:layout_alignBottom="@+id/Play" android:id="@+id/Rewind"></ImageButton>
+    <ImageButton android:src="@drawable/icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@+id/Play" android:layout_alignLeft="@+id/Play" android:layout_alignRight="@+id/Play" android:id="@+id/Stop"></ImageButton>
+    <ImageButton android:src="@drawable/icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_alignParentTop="true" android:id="@+id/Power"></ImageButton>
+</RelativeLayout>
