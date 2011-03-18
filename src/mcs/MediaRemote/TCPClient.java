@@ -18,7 +18,7 @@ public class TCPClient implements Runnable {
 		{
 			InetAddress serverAddr = InetAddress.getByName("127.0.0.1");
 			Log.d("TCP", "C: Connecting...");
-			Socket socket = new Socket(serverAddr, 4444);
+			Socket socket = new Socket(serverAddr, 4445);
 			String message = "Hello from Client android emulator";
 			try 
 			{
