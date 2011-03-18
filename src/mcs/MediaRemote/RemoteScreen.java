@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.TextView;
-
+import android.widget.*;
 
 public class RemoteScreen extends Activity 
 {
@@ -18,6 +18,10 @@ public class RemoteScreen extends Activity
        	super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
         DebugTextBox = (TextView) findViewById(R.id.DebugText);
+        
+        Thread cThread = new Thread(new TCPClient());
+        cThread.start();
+        
     }
 
 	@Override

@@ -1,11 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:layout_height="fill_parent" android:gravity="center_horizontal" android:layout_gravity="center" android:layout_width="match_parent">
-    <ImageButton android:src="@drawable/icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/Play" android:layout_centerHorizontal="true" android:layout_centerVertical="true" android:onClick="PlayListener"></ImageButton>
-    <TextView android:layout_height="wrap_content" android:layout_above="@+id/Play" android:layout_alignLeft="@+id/Play" android:layout_alignRight="@+id/Play" android:id="@+id/DebugText" android:text="Media Centre Remote" android:layout_width="match_parent" ></TextView>
-    <ImageButton android:src="@drawable/icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@+id/Play" android:layout_alignTop="@+id/Play" android:layout_alignBottom="@+id/Play" android:id="@+id/FastForward" android:onClick="FastForwardListener"></ImageButton>
-    <ImageButton android:src="@drawable/icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toLeftOf="@+id/Play" android:layout_alignTop="@+id/Play" android:layout_alignBottom="@+id/Play" android:id="@+id/Rewind" android:onClick="RewindListener"></ImageButton>
-    <ImageButton android:src="@drawable/icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@+id/Play" android:layout_alignLeft="@+id/Play" android:layout_alignRight="@+id/Play" android:id="@+id/Stop" android:onClick="StopListener"></ImageButton>
-    <ImageButton android:src="@drawable/icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_alignParentTop="true" android:id="@+id/Power" android:onClick="PowerListener"></ImageButton>
+	android:orientation="vertical" android:layout_height="fill_parent"
+	android:gravity="center_horizontal" android:layout_gravity="center"
+	android:layout_width="fill_parent" android:layout_margin="30px">
+
+	<ImageButton android:src="@drawable/icon"
+		android:layout_width="wrap_content" android:layout_height="wrap_content"
+		android:id="@+id/Play" android:onClick="PlayListener" android:layout_centerHorizontal="true" android:layout_centerVertical="true" android:layout_alignWithParentIfMissing="true"/>
+
+	<ImageButton android:id="@+id/Stop" android:onClick="StopListener"
+		android:background="@drawable/stopbutton" 
+		android:layout_below="@+id/Play" android:layout_centerHorizontal="true"
+		android:layout_height="70px" android:layout_width="70px" />
+
+	<TextView android:layout_height="wrap_content"
+		android:layout_above="@+id/Play" android:layout_alignLeft="@+id/Play"
+		android:layout_alignRight="@+id/Play" android:id="@+id/DebugText"
+		android:text="Media Centre Remote" android:layout_width="match_parent" />
+
+	<ImageButton android:src="@drawable/icon"
+		android:layout_width="wrap_content" android:layout_height="wrap_content"
+		android:layout_toRightOf="@+id/Play" android:layout_alignTop="@+id/Play"
+		android:layout_alignBottom="@+id/Play" android:id="@+id/FastForward"
+		android:onClick="FastForwardListener" />
+
+	<ImageButton android:src="@drawable/icon"
+		android:layout_width="wrap_content" android:layout_height="wrap_content"
+		android:layout_toLeftOf="@+id/Play" android:layout_alignTop="@+id/Play"
+		android:layout_alignBottom="@+id/Play" android:id="@+id/Rewind"
+		android:onClick="RewindListener" />
+
+	<ImageButton android:src="@drawable/icon"
+		android:layout_width="wrap_content" android:layout_height="wrap_content"
+		android:layout_alignParentRight="true" android:layout_alignParentTop="true"
+		android:id="@+id/Power" android:onClick="PowerListener" />
+
 </RelativeLayout>
