@@ -17,11 +17,13 @@ public class TCPDesktopServer implements Runnable{
     public static final String SERVERIP = "127.0.0.1";
     public static final int SERVERPORT = 4445;
 
-    public void run() {
+    public void run()
+    {
          try {
         	 System.out.println("S: Connecting...");
              ServerSocket serverSocket = new ServerSocket(SERVERPORT);
              while (true) {
+                 
             	 Socket client = serverSocket.accept();
             	 System.out.println("S: Receiving...");
 
@@ -30,6 +32,10 @@ public class TCPDesktopServer implements Runnable{
                       BufferedReader in = new BufferedReader(new InputStreamReader(client.getInputStream()));
                       String str = in.readLine();
                       System.out.println("S: Received: '" + str + "'");
+//                      Thread NewRobotCommand = new Thread(new TCPDesktopServer());
+//                      NewRobotCommand.start();
+                      DoKeyBoardControl.HandleKeyPresses(KeyPressed.DOWN);
+       
 
             	 } catch(Exception e) {
                         System.out.println("S: Error");
@@ -45,6 +51,5 @@ public class TCPDesktopServer implements Runnable{
              e.printStackTrace();
          }
     }
-
-
 }
+

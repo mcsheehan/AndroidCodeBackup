@@ -5,6 +5,10 @@
 
 package remotemediaserver;
 
+import java.awt.Robot;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  *
  * @author mcs
@@ -19,5 +23,13 @@ public class Main {
 
     	Thread desktopServerThread = new Thread(new TCPDesktopServer());
     	desktopServerThread.start();
+        
+
+        //        try
+//        {
+//            desktopServerThread.wait(10);
+//        } catch (InterruptedException ex) {
+//            Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
+//        }
     }
 }

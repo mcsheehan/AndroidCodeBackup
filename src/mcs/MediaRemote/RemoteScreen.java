@@ -19,9 +19,8 @@ public class RemoteScreen extends Activity
         setContentView(R.layout.main);
         DebugTextBox = (TextView) findViewById(R.id.DebugText);
         
-        Thread cThread = new Thread(new TCPClient());
-        cThread.start();
-        
+        //All of the TCP socket threading stuff
+        new BroadcastSocket(null).start();
     }
 
 	@Override
@@ -35,8 +34,6 @@ public class RemoteScreen extends Activity
 		
 		return super.onTouchEvent(event);
 	}
-
-
 
 	public void PlayListener(View PresentView)
 	{
@@ -56,6 +53,8 @@ public class RemoteScreen extends Activity
 	{
 //		TextView DebugTextBox = (TextView) findViewById(R.id.DebugText);
 		DebugTextBox.setText("Stop button");
+        Thread cThread = new Thread(new TCPClient());
+        cThread.start();
 	}
 	public void PowerListener(View PresentView)
 	{

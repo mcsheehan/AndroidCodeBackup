@@ -10,16 +10,14 @@ import android.util.Log;
 
 
 public class TCPClient implements Runnable {
-
-
-	public void run() 
+	public void run(String message) 
 	{
 		try 
 		{
-			InetAddress serverAddr = InetAddress.getByName("127.0.0.1");
+			InetAddress serverAddr = InetAddress.getByName("163.1.187.188");
 			Log.d("TCP", "C: Connecting...");
 			Socket socket = new Socket(serverAddr, 4445);
-			String message = "Hello from Client android emulator";
+//			String message = "Hello from Client android emulator";
 			try 
 			{
 				Log.d("TCP", "C: Sending: '" + message + "'");
@@ -27,11 +25,11 @@ public class TCPClient implements Runnable {
 				out.println(message);
 				Log.d("TCP", "C: Sent.");
 				Log.d("TCP", "C: Done.");
-			} 
+			}
 			catch(Exception e) 
 			{
 				Log.e("TCP", "S: Error", e);
-			} 
+			}
 			finally 
 			{
 				socket.close();
